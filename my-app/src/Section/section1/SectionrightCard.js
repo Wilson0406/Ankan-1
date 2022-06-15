@@ -1,4 +1,5 @@
 import React from 'react'
+import './section1.css'
 
 function SectionrightCard(props) {
     var st="The news media or news industry are forms of mass media that focus on delivering news to the general public or a target public."
@@ -23,14 +24,14 @@ function SectionrightCard(props) {
          else return s;
       }
     return (
-        <div className="pov-card" style={{minHeight:"20rem" }}>
-            <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Pov <div style={{ background: "red", display: "inline-block", width: "230px", height: "5px" }}></div></h4>
+        <div className="pov-card">
+            {/* <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Pov <div style={{ background: "red", display: "inline-block", width: "230px", height: "5px" }}></div></h4> */}
            { props.data?(
             <div className="row">
              
-                <div className="pov-card-right col-md-12">
-                    <div className='' style={{ width: "16rem",marginLeft:"10px" }}>
-                        <img src={props.data[6].image_url}  className='img-fluid' style={{minWidth:"16rem"}} alt="" />
+                <div className="col-md-12">
+                    <div className='pov-card-right' >
+                        <img src={props.data[6].image_url}  className='img-fluid pov-card-top-img'  alt="" />
                         <div className="card-body">
                             <h6 className="card-title " style={{fontSize:"13px",marginLeft:"-10px"}}>
                                {isText(props.data[6].title)}

@@ -1,4 +1,5 @@
 import React from 'react'
+import './section1.css'
 
 function SectionLeftCard(props) {
     var st="The news media or news industry are forms of mass media that focus on delivering news to the general public or a target public."
@@ -25,19 +26,18 @@ function SectionLeftCard(props) {
      }
     return (
         
-        <section className='top-heading'  style={{
-
-        }} >
-            <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Top Stories <div style={{ background: "red", display: "inline-block", width: "600px", height: "5px" }}></div></h4>
+        <section className='top-heading'>
+            
+            
+            
+            {/* <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Top Stories <div style={{ background: "red", display: "inline-block", width: "600px", height: "5px" }}></div></h4> */}
             {
                      props.data?(
                          <>
             <div className="row">
                 <div className="col-md-6">
                  
-                    <div className='card-left' style={{
-                        width: "22rem", height:"20rem", marginLeft: "8px"
-                    }}>
+                    <div className="card-left">
                         <img src={props.data[0].image_url} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h6 className="card-title">{isText(props.data[0].title)}</h6>
@@ -50,7 +50,7 @@ function SectionLeftCard(props) {
                     </div>
                   
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 card-left-right">
 
                     <div className=" card-right">
                         <div className="card-body right-card">
