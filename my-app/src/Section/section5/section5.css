@@ -3,34 +3,36 @@
     font-weight: 600;
   }
   .card-section5-img{
-    /* margin-left: 5px; */
-    display: none;
+    margin-left:1px;
+    
   }
   
   .card-section5-main{
     
     width: 330px;
     box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
-    /* border: 1px solid red; */
+
+    
   }
  
   .card-section5-img{
     max-width:9rem;
    
   }
-  .card-section5-body{
-    border: 1px solid gray;
-   
+
+
+  @media only screen and (max-width: 500px) {
+    .card-section5-main{
+      width: fit-content;
+    }
+    
+    
   }
 
-  /* @media only screen and (max-width: 500px) {
-   
-    .card-section5-img{
-        min-width:20rem
-      }
-      .card-section5-body{
-
-         margin-top: 50px; 
-     
+  @media only screen and (max-width:330px) {
+    .card-section5-text{
+      font-size: 8px;
     }
-  } */
+  }
+
+  
