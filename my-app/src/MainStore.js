@@ -19,8 +19,8 @@ function MainStore(props) {
       {
         props.data?(
         <div className="row">
-          <div className="col-md-8" style={{ marginLeft: "28px" }} ><SectionLeftCard data={props.data.slice(0,6)} ></SectionLeftCard></div>
-          <div className="col-md-3" style={{ marginLeft: "7px" }}><SectionrightCard data={props.data.slice(0,7)}></SectionrightCard></div>
+          <div className="col-md-8 col-12 card-section1-card-left-main"  ><SectionLeftCard data={props.data.slice(0,6)} ></SectionLeftCard></div>
+          <div className="col-md-3 col-12 card-section1-card-right-main" ><SectionrightCard data={props.data.slice(0,7)}></SectionrightCard></div>
 
         </div>
         ):(<></>)
@@ -35,11 +35,11 @@ function MainStore(props) {
       </div>
 
 
-      <div className="container" style={{ marginTop: "10px" }}>
+      <div className="container " style={{ marginTop: "10px" }}>
       { props.t_data?(
         <div className="row">
-          <div className="col-md-8" style={{ marginLeft: "28px" }} ><SectionLeftCard data={props.t_data.slice(0,6)} ></SectionLeftCard></div>
-          <div className="col-md-3" style={{ marginLeft: "7px" }}><SectionrightCard data={props.t_data.slice(0,7)}></SectionrightCard></div>
+          <div className="col-md-8 col-12 card-section1-card-left-main" ><SectionLeftCard data={props.t_data.slice(0,6)} ></SectionLeftCard></div>
+          <div className="col-md-3 col-12 card-section1-card-left-main"><SectionrightCard data={props.t_data.slice(0,7)}></SectionrightCard></div>
 
         </div>
       ):(<></>)
@@ -47,7 +47,7 @@ function MainStore(props) {
       </div>
 
 
-      <div className="container" style={{ marginTop: "20px", maxWidth: "68rem" }}>
+      <div className="container card-section4-left-main" >
         {props.data ? (
           <div className="row">
             <div className="col-md-6 col-sm-10">
@@ -71,8 +71,8 @@ function MainStore(props) {
         {
           props.f_data ? (
             <div className="row">
-              <div className="col-md-8" style={{ marginLeft: "28px" }} ><SectionLeftCard data={props.f_data.slice(0, 6)}></SectionLeftCard></div>
-              <div className="col-md-3" style={{ marginLeft: "7px" }}><SectionrightCard data={props.f_data.slice(0, 7)}></SectionrightCard></div>
+              <div className="col-md-8" ><SectionLeftCard data={props.f_data.slice(0, 6)}></SectionLeftCard></div>
+              <div className="col-md-3"><SectionrightCard data={props.f_data.slice(0, 7)}></SectionrightCard></div>
 
             </div>
           ) : (<></>)
@@ -89,14 +89,14 @@ function MainStore(props) {
 
 
 
-      <div className="container" style={{ marginTop: "20px", maxWidth: "68rem" }}>
+      <div className="container" >
         {
           props.s_data && props.t_data && props.data ? (
             <div className="row">
-              <div className="col-md-4 my-2">
+              <div className="col-md-4 col-12 my-2">
                 <Section5_first data={props.t_data.slice(6, 10)}></Section5_first>
               </div>
-              <div className="col-md-4 my-2">
+              <div className="col-md-4 col-12 my-2">
                 <Section5_first data={props.s_data.slice(6, 10)}></Section5_first>
               </div>
               <div className="col-md-4 my-2">

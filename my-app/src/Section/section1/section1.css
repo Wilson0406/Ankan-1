@@ -62,6 +62,7 @@
 
   /* border: 1px solid red; */
 }
+
 .pov-card-right {
   width: 16rem;
   /* margin-left: 10px; */
@@ -74,9 +75,10 @@
   .top-heading {
     height: 400px;
     width: fit-content;
-    margin-left: -10px;
+    /* margin-left:0px; */
   }
-  .card-left-right{
+
+  .card-left-right {
     display: none;
   }
 
@@ -84,17 +86,25 @@
     width: fit-content;
     height: 390px;
     margin-top: 10px;
-    margin-left: 10px;
+    /* margin-left: 0px; */
     /* border: 1px solid red; */
   }
 
   .pov-card-right {
     width: fit-content;
-  
+
   }
-  
-  .pov-card-right-reader-editor{
+
+  .pov-card-right-reader-editor {
     display: none;
+  }
+
+  .card-section1-card-left-main {
+    margin-left: auto;
+  }
+
+  .card-section1-card-right-main {
+    margin-left: auto;
   }
 
 

@@ -85,8 +85,8 @@ function India() {
   }, [])
   return (
     <>
-       {/* <Header></Header>
-      <Navbar></Navbar> */}
+       {/* <Header></Header> */}
+      {/* <Navbar></Navbar> */}
      
       <MainStore data={firstIndiaData} s_data={secIndiaData} t_data={thirdIndiaData} f_data={fourIndiaData}></MainStore>
      {/* <Footer></Footer> */}

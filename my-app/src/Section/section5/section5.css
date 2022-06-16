@@ -3,7 +3,8 @@
     font-weight: 600;
   }
   .card-section5-img{
-    margin-left: 5px;
+    /* margin-left: 5px; */
+    display: none;
   }
   
   .card-section5-main{
@@ -22,7 +23,7 @@
    
   }
 
-  @media only screen and (max-width: 500px) {
+  /* @media only screen and (max-width: 500px) {
    
     .card-section5-img{
         min-width:20rem
@@ -32,4 +33,4 @@
          margin-top: 50px; 
      
     }
-  }
+  } */

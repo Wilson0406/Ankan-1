@@ -100,23 +100,19 @@
    
 }
 
-/* top-headding */
-
-
-/* Pov */
-
-
-.pov-card-right-reader-editor{
-
-  
+/* mainpage */
+.card-section1-card-left-main{
+margin-left:28px;
 }
-
-/* section 2 card */
-
-
-/* section4 */
+.card-section1-card-right-main{
+  margin-left:7px;
+  }
 
 
 
-/* section5 */
+  .card-section4-left-main{
+    margin-top:20px;
+     max-width:68rem
+  }
+  
 

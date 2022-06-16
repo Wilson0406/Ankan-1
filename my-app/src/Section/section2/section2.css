@@ -38,6 +38,7 @@
     .card-section2-main{
       width:fit-content;
       height:auto;
+      margin-left: auto;
     
     }
     .card-section2{
@@ -55,9 +56,10 @@
   @media only screen and (max-width:299px) {
     .card-section2-main{
       width:fit-content;
-      
+      margin-left: auto;
     
     }
+    
     
   }
 

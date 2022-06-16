@@ -12,7 +12,7 @@ const admin_post=new mongoose.Schema({
     },
     keywords:[{
         type:String,
-       
+        
     }],
     creator:[{
         type:String,
