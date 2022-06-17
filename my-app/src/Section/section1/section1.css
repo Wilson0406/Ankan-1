@@ -133,7 +133,7 @@
   
     margin-left: -70px;
     margin-top: 20px;
-    border: 1px solid red;
+ 
   }
   .pov-card-right-reader-editor{
     display: none;
@@ -155,4 +155,26 @@
   }
 
   
+}
+
+
+@media only screen and (min-width: 800px) and (max-width:1200px) {
+  .pov-card{
+    display: none;
+  }
+
+  .top-heading{
+   
+    width:57rem;
+
+  }
+    
+}
+
+@media only screen and (min-width: 800px) and (max-width:1000px) {
+  .top-heading{
+   
+    width:42rem;
+
+  }
 }

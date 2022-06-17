@@ -52,5 +52,29 @@
 
   }
 
+  @media only screen and (width:912px) {
+     .card-section5-main{
+      display:none;
+      
+     }
+  }
+  @media only screen and (width:768px) {
+    .card-section5-main{
+     display:none;
+     
+    }
+    .pov-card{
+      display: none;
+    }
+ }
+
+ @media only screen and (width:820px) {
+  .card-section5-main{
+    display:none;
+    
+   }
+ }
+
+
 
   
