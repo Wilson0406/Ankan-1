@@ -20,7 +20,7 @@ function Section5_first(props) {
                         <div className="row">
                             <div className="col-md-6 col-6">
                                 <div className="card-section5-img">
-                                    <img src={props.data[0].image_url} className='img-fluid' alt="" />
+                                    <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" className='img-fluid' alt="" />
                                 </div>
                             </div>
                             <div className="col-md-6 col-6">
@@ -28,7 +28,7 @@ function Section5_first(props) {
 
                             </div>
                         </div>
-                    </div>
+                    </div>  
 
                     <div className='my-2 card-Section5-body'>
                         <div className="row">

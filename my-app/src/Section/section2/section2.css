@@ -1,8 +1,9 @@
 .card-section2{
     margin-left: 3px;
     margin-right: 3px;
-    /* border: 2px solid red; */
+   
     max-width:17rem;
+    /* border: 1px solid red; */
   
   }
   
@@ -14,7 +15,7 @@
   
   }
   .card-body-section2{
-    width:230px;
+    /* width:230px; */
     margin-left: 3px;
     /* border:1px solid red; */
   }
@@ -63,3 +64,29 @@
     
   }
 
+  /* tablet */
+
+  @media only screen and (min-width: 500px) and (max-width:800px) {
+    .card-section2-main{
+      height: auto;
+      width:100%;
+    }
+    .card-body-section2{
+      width: fit-content;
+    }
+    .card-section2{
+      max-width:35rem;
+    }
+
+    .card-section2-main{
+      width:40rem;
+      margin-left:-70px
+    }
+    .card-section2{
+      max-width: 100%;
+    }
+    .card-title{
+      font-size: 20px;
+    }
+
+  }

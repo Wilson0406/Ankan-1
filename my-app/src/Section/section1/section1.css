@@ -1,10 +1,9 @@
 .top-heading {
   height: 470px;
-  width: 730px;
+  width: 710px;
 
   box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
 
-  /* border: 1px solid red; */
 }
 
 .right-card p {
@@ -47,34 +46,39 @@
 
 
 .card-left {
-  max-width: 22rem;
-  height: 120px;
+  max-width:22rem;
+  height:auto;
   margin-left: 8px;
   /* border:1px solid red; */
 
+}
+.card-left-right{
+  /* margin-top:100px; */
 }
 
 /* .pov-card */
 .pov-card {
   box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
   width: 280px;
-  height: 320px;
+  height: 350px;
 
   /* border: 1px solid red; */
 }
 
 .pov-card-right {
   width: 16rem;
-  /* margin-left: 10px; */
-  /* border:2px solid red; */
+
+  
 }
+
 
 
 
 @media only screen and (max-width: 500px) {
   .top-heading {
-    height: 400px;
+    height:auto;
     width: fit-content;
+    
     /* margin-left:0px; */
   }
 
@@ -86,8 +90,7 @@
     width: fit-content;
     height: 390px;
     margin-top: 10px;
-    /* margin-left: 0px; */
-    /* border: 1px solid red; */
+  
   }
 
   .pov-card-right {
@@ -99,14 +102,57 @@
     display: none;
   }
 
-  .card-section1-card-left-main {
+  /* .card-section1-card-left-main {
     margin-left: auto;
+  } */
+
+  /* .card-section1-card-right-main {
+    margin-left: auto;
+  } */
+
+
+
+}
+
+/* table  */
+
+@media only screen and (min-width: 500px) and (max-width:800px) {
+
+  .card-left {
+    max-width:100%;
+
+  }
+  .top-heading {
+    
+    height: auto;
+    margin-left:-70px;
+  }
+  .pov-card{
+    width:710px;
+    height:auto;
+  
+    margin-left: -70px;
+    margin-top: 20px;
+    border: 1px solid red;
+  }
+  .pov-card-right-reader-editor{
+    display: none;
+  }
+  .card-text {
+
+    font-size:20px;
   }
 
-  .card-section1-card-right-main {
-    margin-left: auto;
+  
+
+  .pov-card-right {
+    width:fit-content;
+  
+    
+  }
+  .card-title{
+    font-size: 20px;
   }
 
-
-
+  
 }

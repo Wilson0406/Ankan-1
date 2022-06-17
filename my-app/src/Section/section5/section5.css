@@ -34,5 +34,23 @@
       font-size: 8px;
     }
   }
+  /* tablet */
+  @media only screen and (min-width: 500px) and (max-width:800px) {
+    .card-section5-main{
+      
+      width:40rem;
+      margin-left: -70px;
+    }
+  
+    .card-section5-img{
+      max-width:13rem;
+    }
+    .card-section5-text{
+      font-size: 20px;
+    }
+
+
+  }
+
 
   

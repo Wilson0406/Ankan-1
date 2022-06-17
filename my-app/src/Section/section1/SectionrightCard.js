@@ -31,12 +31,12 @@ function SectionrightCard(props) {
              
                 <div className="col-md-12">
                     <div className='pov-card-right' >
-                        <img src={props.data[6].image_url}  className='img-fluid pov-card-top-img'  alt="" />
+                        <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg"  className='img-fluid pov-card-top-img'  alt="" />
                         <div className="card-body">
-                            <h6 className="card-title " style={{fontSize:"13px",marginLeft:"-10px"}}>
+                            <h6 className="card-title" style={{marginLeft:"-10px"}}>
                                {isText(props.data[6].title)}
                             </h6>
-                            <h6 className='card-title' style={{fontSize:"13px",marginLeft:"-10px"}}>{isDescription(props.data[6].description)}</h6>
+                            <h6 className='card-title' style={{marginLeft:"-10px"}}>{isDescription(props.data[6].description)}</h6>
                             <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{isCreator(props.data[6].creator)}</span></span>
                         </div>
                     </div>

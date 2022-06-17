@@ -12,11 +12,14 @@ import User_details from './pages/User_details'
 
 function Admin_main() {
     const [active_content,setActive_content]=useState("dashboard")
+    const [profileName,setProfileName]=useState();
     const navigate=useNavigate();
     const check_admin=()=>{
         axios.get('/admin_active').then((res)=>{
              if(res.status===200){
+                setProfileName(res.data.fname+" "+res.data.lname)
                 navigate('/admin_main')
+
              }else{
                  navigate('/');
              }
@@ -145,7 +148,7 @@ function Admin_main() {
                     <li class="nav-item">
                         <a class="nav-link" onClick={()=>{
                             setActive_content("users")
-                        }}>
+                        }} style={{cursor:"pointer"}}>
                             <i class="fas fa-fw fa-table"></i>
                             <span>Users</span></a>
                     </li>
@@ -341,7 +344,11 @@ function Admin_main() {
                                 <li class="nav-item dropdown no-arrow">
                                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{profileName?(
+                                            <>
+                                           { profileName.substring(0,15)}
+                                            </>
+                                        ):(<></>)}...</span>
                                         <img class="img-profile rounded-circle"
                                             src="admin/img/undraw_profile.svg" />
                                     </a>
@@ -401,8 +408,8 @@ function Admin_main() {
         
 
 {/* ----------------------------------------------------------------------- */}
-                        <footer class="sticky-footer bg-white">
-                            <div class="container my-auto">
+                        <footer class=" bg-white">
+                            <div class="container" style={{marginTop:"100vh"}}>
                                 <div class="copyright text-center my-auto">
                                     <span>Copyright &copy; Your Website 2021</span>
                                 </div>

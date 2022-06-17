@@ -102,10 +102,11 @@
 
 /* mainpage */
 .card-section1-card-left-main{
-margin-left:28px;
+/* margin-left:28px; */
+/* border: 1px solid red; */
 }
 .card-section1-card-right-main{
-  margin-left:7px;
+  /* margin-left:7px; */
   }
 
 

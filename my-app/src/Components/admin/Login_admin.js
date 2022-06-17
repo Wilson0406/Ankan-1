@@ -8,13 +8,15 @@ function Login_admin() {
     const navigate=useNavigate();
 
     const apiCall=()=>{
+       
         axios.post('/admin_signin',{
             email,password
         }).then((res)=>{
+            console.log(res.status)
             if(res.status===200) navigate('/admin_main')
              
         }).catch(()=>{
-            alert('invalid check details' )
+            alert('invalid check details')
         })
     }
 

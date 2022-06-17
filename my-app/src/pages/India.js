@@ -79,8 +79,8 @@ function India() {
   useEffect(() => {
     apiData();
     apiData2();
-    apiData3();
-    apiData4();
+    // apiData3();
+    // apiData4();
 
   }, [])
   return (

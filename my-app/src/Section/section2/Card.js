@@ -29,12 +29,12 @@ function Card(props) {
                     <div className="col-md-3 ">
 
                         <div className='card-section2 my-2'>
-                            <img src={props.data[0].image_url} alt="" className='img-fluid card-img-top' />
+                            <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
-                                <h6>
+                                <h6 className='card-title'>
                                  {isText(props.data[0].title)}...
                                 </h6>
-                                <p>{isCreator(props.data[0].creator)}  <span >{props.data[0].pubDate}</span></p>
+                                <p className='card-title'>{isCreator(props.data[0].creator)}  <span >{props.data[0].pubDate}</span></p>
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@ function Card(props) {
                     <div className="col-md-3">
 
                         <div className='card-section2 my-2'>
-                            <img src={props.data[1].image_url} alt="" className='img-fluid card-img-top' />
+                            <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg" alt="" className='img-fluid card-img-top' />
                             <div className="card-body-section2 my-2">
                                 <h6>{isText(props.data[1].title)}...
                                 </h6>
