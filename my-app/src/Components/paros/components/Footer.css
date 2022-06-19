@@ -1,82 +1,14 @@
-.footer {
-    background-color: rgb(192, 190, 190);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    height: 200px;
-    margin-top: 31vh;
-
-
-
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+   
 }
 
-.button {
-    margin-right: 50px;
-    justify-content: space-between;
-    padding: 10px;
-    border: none;
-    background-color: rgb(192, 190, 190);
-    height: 20%;
-
-
-}
-
-.lowerbutton {
-    margin-right: 80px;
-    justify-content: space-between;
-    padding: 30px;
-    border: none;
-    background-color: rgb(192, 190, 190);
-    height: 3%;
-
-}
-
-.footerbelow {
-    height: 40px;
-    background-color: rgb(239, 239, 10);
-    display: flex;
-
-
-}
-
-.text {
-    font-Size: 1;
-}
-
-.insta {
-    margin-left: 30px;
-    cursor: pointer;
-}
-
-.my-2 {
-    cursor: pointer;
-}
-
-.flex {
-    display: flex;
-}
-
-
-.image_paros_img {
-    width: 200px;
-
-
-}
-
-
-.lowerbutton_div {
-    top: 90;
-    left: 525;
-    right: 0;
-    bottom: 100;
-    justify-content: 'center';
-    align-items: 'center'
-}
-.icons a{
+footer a {
     text-decoration: none;
-    color: black;
-    
-    
+    color: #212529;
+}
+footer a:hover {
+    color: #ff3030;
 }

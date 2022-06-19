@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../css/style.css'
 import axios from 'axios'
+import Loading from './Loading';
 
 
 function Admin_blog() {
@@ -30,6 +31,7 @@ function Admin_blog() {
   }
 
   return (<>
+  <Loading></Loading>
     <div className="container-backend">
       <form >
         <div className="row">

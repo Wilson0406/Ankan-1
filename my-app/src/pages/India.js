@@ -78,9 +78,9 @@ function India() {
 
   useEffect(() => {
     apiData();
-    apiData2();
-    apiData3();
-    apiData4();
+    // apiData2();
+    // apiData3();
+    // apiData4();
   
   }, [])
   return (
@@ -89,7 +89,7 @@ function India() {
       {/* <Navbar></Navbar> */}
      
       <MainStore data={firstIndiaData} s_data={secIndiaData} t_data={thirdIndiaData} f_data={fourIndiaData}></MainStore>
-     {/* <Footer></Footer> */}
+     <Footer></Footer>
     </>
   )
 }
