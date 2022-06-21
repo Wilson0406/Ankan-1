@@ -90,8 +90,9 @@ function MainStore(props) {
 
 
       <div className="container" >
-        {  
-props.t_data&&props.data  ? (
+        { 
+
+          props.s_data&&props.t_data&&props.data  ? (
             <div className="row">
               <div className="col-md-4 col-sm-10 col-12 my-2">
                 <Section5_first data={props.t_data.slice(6, 10)}></Section5_first>

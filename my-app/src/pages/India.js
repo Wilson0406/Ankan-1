@@ -3,8 +3,8 @@ import axios from 'axios'
 import { useState } from 'react'
 import MainStore from '../MainStore'
 import { useEffect } from 'react';
-import Header from '../Components/wiliam/Header';
-import Navbar from '../Components/Navbar';
+import Header from '../Components/wiliam/header/Header'
+
 import Footer from '../Components/paros/components/Footer';
 
 
@@ -78,18 +78,17 @@ function India() {
 
   useEffect(() => {
     apiData();
-    // apiData2();
-    // apiData3();
-    // apiData4();
+    apiData2();
+    apiData3();
+    apiData4();
   
   }, [])
   return (
     <>
-       {/* <Header></Header> */}
-      {/* <Navbar></Navbar> */}
-     
+      
+      <Header></Header>
       <MainStore data={firstIndiaData} s_data={secIndiaData} t_data={thirdIndiaData} f_data={fourIndiaData}></MainStore>
-     <Footer></Footer>
+     {/* <Footer></Footer> */}
     </>
   )
 }

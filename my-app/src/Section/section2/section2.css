@@ -79,8 +79,8 @@
     }
 
     .card-section2-main{
-      width:40rem;
-      margin-left:-70px
+      width:auto
+      /* margin-left:-70px */
     }
     .card-section2{
       max-width: 100%;

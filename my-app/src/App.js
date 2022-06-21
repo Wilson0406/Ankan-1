@@ -4,8 +4,8 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import Header from './Components/wiliam/Header';
-import Navbar from './Components/Navbar';
+
+import Footer from './Components/paros/components/Footer';
 import India from './pages/India';
 import Sports from './pages/Sports';
 import ScienceAndTech from './pages/ScienceAndTech';
@@ -13,7 +13,6 @@ import Economy from './pages/Economy';
 import Politics from './pages/Politics';
 import International from './pages/International';
 import Governance from './pages/Governance';
-
 import Error from './pages/Error';
 import Admin_main from './Components/admin/Admin_main';
 import Login from './Components/admin/Login';
@@ -33,7 +32,7 @@ function App() {
    
       
      
-     
+  
       <Router>
         <Routes>
           <Route exact path='/' element={<India />} />
@@ -52,6 +51,7 @@ function App() {
           <Route path='*' element={<Error />} />
         </Routes>
       </Router>
+      <Footer></Footer>
     
 
 

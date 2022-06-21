@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.navbar{
+/* .navbar{
   height: 50px;
   width:700px;
   background: #F5DB3C;
@@ -99,7 +99,7 @@
 .search_btn:hover{
    color:red;
    
-}
+} */
 
 /* mainpage */
 .card-section1-card-left-main{

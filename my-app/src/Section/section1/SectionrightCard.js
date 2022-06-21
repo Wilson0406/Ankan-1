@@ -34,9 +34,9 @@ function SectionrightCard(props) {
                         <img src="https://static.india.com/wp-content/uploads/2022/05/Chennai-Super-Kings-vs-Kolkata-Knight-Riders.jpeg"  className='img-fluid pov-card-top-img'  alt="" />
                         <div className="card-body">
                             <h6 className="card-title" style={{marginLeft:"-10px"}}>
-                               {isText(props.data[6].title)}
+                               {isText(props.data[6].title).substring(0,50)}...
                             </h6>
-                            <h6 className='card-title' style={{marginLeft:"-10px"}}>{isDescription(props.data[6].description)}</h6>
+                            <h6 className='card-title' style={{marginLeft:"-10px"}}>{isDescription(props.data[6].description).substring(0,50)}...</h6>
                             <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{isCreator(props.data[6].creator)}</span></span>
                         </div>
                     </div>

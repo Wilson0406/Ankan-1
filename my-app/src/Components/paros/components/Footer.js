@@ -5,7 +5,7 @@ import "./Footer.css";
 function footer() {
   return (
     <>
-      <footer className="text-center text-lg-start text-muted" style={{background:"#acacac"}}>
+      <footer className="text-center text-lg-start text-muted " style={{background:"#acacac"}}>
 
 
         <section className="">

@@ -1,5 +1,5 @@
 .top-heading {
-  height: 470px;
+  height: 500px;
   width: 710px;
 
   box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
@@ -81,6 +81,11 @@
     
     /* margin-left:0px; */
   }
+  .card-left {
+    max-width: none;
+    height:auto;
+    margin-left: 8px;
+  }
 
   .card-left-right {
     display: none;
@@ -116,7 +121,7 @@
 
 /* table  */
 
-@media only screen and (min-width: 500px) and (max-width:800px) {
+@media only screen and (min-width: 500px) and (max-width:765px) {
 
   .card-left {
     max-width:100%;
@@ -125,13 +130,14 @@
   .top-heading {
     
     height: auto;
-    margin-left:-70px;
+    width: auto;
   }
   .pov-card{
     width:710px;
     height:auto;
   
-    margin-left: -70px;
+    
+    width: auto;
     margin-top: 20px;
  
   }
@@ -155,6 +161,12 @@
   }
 
   
+}
+
+@media only screen and (min-width:768px) and (max-width:799px) {
+  .pov-card{
+    display: none;
+  }
 }
 
 

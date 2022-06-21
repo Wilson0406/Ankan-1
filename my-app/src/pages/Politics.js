@@ -1,8 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import MainStore from '../MainStore'
-import Header from '../Components/wiliam/Header';
-import Navbar from '../Components/Navbar';
 import Footer from '../Components/paros/components/Footer';
 
 function Politics() {
@@ -84,8 +82,7 @@ const apiData=()=>{
 
   
   return (
-    <> <Header></Header>
-       <Navbar></Navbar>
+    <> 
        <MainStore data={firstData} s_data={sData} t_data={tData} f_data={fData}></MainStore>
         <Footer></Footer>
     </>
