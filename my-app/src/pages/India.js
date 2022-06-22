@@ -4,6 +4,7 @@ import { useState } from 'react'
 import MainStore from '../MainStore'
 import { useEffect } from 'react';
 import Header from '../Components/wiliam/header/Header'
+import Navbar from '../Components/Navbar/Navbar'
 
 import Footer from '../Components/paros/components/Footer';
 
@@ -78,15 +79,16 @@ function India() {
 
   useEffect(() => {
     apiData();
-    apiData2();
-    apiData3();
-    apiData4();
+    // apiData2();
+    // apiData3();
+    // apiData4();
   
   }, [])
   return (
     <>
       
-      <Header></Header>
+      {/* <Header></Header> */}
+      <Navbar></Navbar>
       <MainStore data={firstIndiaData} s_data={secIndiaData} t_data={thirdIndiaData} f_data={fourIndiaData}></MainStore>
      {/* <Footer></Footer> */}
     </>
