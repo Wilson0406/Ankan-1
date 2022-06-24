@@ -6,6 +6,7 @@ const Admin_data=require('../schema/adminSchema');
 const jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt');
 const KEY = "ANKANKARMAKAR";
+const user_verify=require('../access/userAccess')
 
 
 
@@ -64,6 +65,30 @@ router.post('/user_signin', async (req, res) => {
         }
     } catch (e) {
         res.status(400).send("error");
+    }
+})
+
+router.post('/user_logout',(req,res)=>{
+
+    res.clearCookie('access_token');
+    
+    res.status(200).send();
+})
+
+router.get('/user_active',user_verify,async(req,res)=>{
+
+    try {
+        const verify = await jwt.verify(req.cookies.access_token, "ANKANKARMAKAR")
+        const user_profile = await Data.findOne({ _id: verify.id });
+        if (user_profile) {
+            res.status(200).send(user_profile)
+        } else {
+            res.status(400).send()
+        }
+        
+    }
+    catch (e) {
+        res.status(400).send()
     }
 })
 

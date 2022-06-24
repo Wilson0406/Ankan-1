@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import MainStore from '../MainStore'
 import Footer from '../Components/paros/components/Footer';
+import Header from '../Components/wiliam/header/Header';
+import Navbar from '../Components/Navbar/Navbar';
+import Loader from '../Components/loader/Loader';
 
 function Economy() {
   const [firstData, setFirstData] = useState();
@@ -73,9 +76,9 @@ function Economy() {
 
   useEffect(() => {
     apiData();
-    apiData2();
-    apiData3();
-    apiData4();
+    // apiData2();
+    // apiData3();
+    // apiData4();
 
   }, [])
 
@@ -83,8 +86,16 @@ function Economy() {
   return (
     <>
       
-      <MainStore data={firstData} s_data={sData} t_data={tData} f_data={fData}></MainStore>
-      <Footer></Footer>
+      
+      <Header></Header>
+      <Navbar></Navbar>
+      {
+           firstData || sData || tData || fData?(
+            <MainStore data={firstData} s_data={sData} t_data={tData} f_data={fData}></MainStore>
+           ):(<Loader></Loader>)
+      }
+      
+     <Footer></Footer>
     </>
   )
 }

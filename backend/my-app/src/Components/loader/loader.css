@@ -1,0 +1,30 @@
+.loader-main_div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-center_div{
+    height:70px;
+    width: 70px;
+  
+    display: grid;
+    place-items: center;
+    border-right: 5px solid #255;
+    border-radius: 50%;
+    animation: rot 2s linear infinite;
+}
+
+@keyframes rot {
+    0%{
+       transform: rotate(0deg); 
+    }
+    0%{
+        
+transform: rotate(360deg); 
+     }
+}
+
+
+

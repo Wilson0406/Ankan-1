@@ -60,7 +60,7 @@ adminRoute.get('/admin_active', admin_verify, async (req, res) => {
 })
 
 
-adminRoute.post('/admin_post', async (req, res) => {
+adminRoute.post('/admin_post',admin_verify, async (req, res) => {
     try {
 
         const title = req.body.title;
@@ -169,6 +169,14 @@ adminRoute.get('/all_user',async(req,res)=>{
     }catch(e){
         res.status(400).send();
     }
+})
+
+adminRoute.post('/admin_logout',(req,res)=>{
+
+        res.clearCookie('access_token');
+    
+        res.status(200).send();
+         
 })
 
 

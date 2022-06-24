@@ -1,0 +1,192 @@
+.top-heading {
+  height: 500px;
+  width: 710px;
+
+  box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
+
+}
+
+.right-card p {
+  font-size: 12px;
+  font-weight: 700;
+  /* border: 1px solid red; */
+  margin-top: -15px;
+  margin-left: -10px;
+
+
+}
+
+.card-right {
+  height: 75px;
+  border-bottom: 1px solid rgba(89, 84, 84, 0.1);
+}
+
+.card-logo i {
+  /* border: 1px solid red; */
+  margin-left: -10px;
+  font-weight: 200;
+
+}
+
+.card-left .card-body {
+  margin-left: -10px;
+}
+
+.logo-text {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 10px;
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+.card-left {
+  max-width:22rem;
+  height:auto;
+  margin-left: 8px;
+  /* border:1px solid red; */
+
+}
+.card-left-right{
+  /* margin-top:100px; */
+}
+
+/* .pov-card */
+.pov-card {
+  box-shadow: 3px -1px 10px -1px rgba(89, 84, 84, 0.3);
+  width: 280px;
+  height: 350px;
+
+  /* border: 1px solid red; */
+}
+
+.pov-card-right {
+  width: 16rem;
+
+  
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .top-heading {
+    height:auto;
+    width: fit-content;
+    
+    /* margin-left:0px; */
+  }
+  .card-left {
+    max-width: none;
+    height:auto;
+    margin-left: 8px;
+  }
+
+  .card-left-right {
+    display: none;
+  }
+
+  .pov-card {
+    width: fit-content;
+    height: 390px;
+    margin-top: 10px;
+  
+  }
+
+  .pov-card-right {
+    width: fit-content;
+
+  }
+
+  .pov-card-right-reader-editor {
+    display: none;
+  }
+
+  /* .card-section1-card-left-main {
+    margin-left: auto;
+  } */
+
+  /* .card-section1-card-right-main {
+    margin-left: auto;
+  } */
+
+
+
+}
+
+/* table  */
+
+@media only screen and (min-width: 500px) and (max-width:765px) {
+
+  .card-left {
+    max-width:100%;
+
+  }
+  .top-heading {
+    
+    height: auto;
+    width: auto;
+  }
+  .pov-card{
+    width:710px;
+    height:auto;
+  
+    
+    width: auto;
+    margin-top: 20px;
+ 
+  }
+  .pov-card-right-reader-editor{
+    display: none;
+  }
+  .card-text {
+
+    font-size:20px;
+  }
+
+  
+
+  .pov-card-right {
+    width:fit-content;
+  
+    
+  }
+  .card-title{
+    font-size: 20px;
+  }
+
+  
+}
+
+@media only screen and (min-width:768px) and (max-width:799px) {
+  .pov-card{
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 800px) and (max-width:1200px) {
+  .pov-card{
+    display: none;
+  }
+
+  .top-heading{
+   
+    width:57rem;
+
+  }
+    
+}
+
+@media only screen and (min-width: 800px) and (max-width:1000px) {
+  .top-heading{
+   
+    width:42rem;
+
+  }
+}
