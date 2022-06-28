@@ -60,6 +60,7 @@ function Admin_blog() {
             <input type="file"  onChange={(e) => {
               setImageUrl(e.target.files[0])
             }} id="imageurl" name="imageurl"  placeholder="Image" />
+            image should be less than 700 kb
           </div>
         </div>
         <div className="row">

@@ -75,7 +75,8 @@ adminRoute.post('/admin_post',admin_verify, async (req, res) => {
         cloud.config({
             cloud_name: 'do69xdw9x',
             api_key: '158449624671379',
-            api_secret: 'hqlgcrTjSIEVzoBh9XTMDicszWI'
+            api_secret: 'hqlgcrTjSIEVzoBh9XTMDicszWI',
+            secure: true
         })
         const file = req.files.image_url;
         
@@ -118,7 +119,8 @@ adminRoute.post('/admin_blog', admin_verify, async (req, res) => {
         cloud.config({
             cloud_name: 'do69xdw9x',
             api_key: '158449624671379',
-            api_secret: 'hqlgcrTjSIEVzoBh9XTMDicszWI'
+            api_secret: 'hqlgcrTjSIEVzoBh9XTMDicszWI',
+            secure: true
         })
         const file = req.files.image_url;
         if (file.size <= 700000) {
