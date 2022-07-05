@@ -9,7 +9,7 @@ const Admin_data = require('../schema/adminSchema');
 const admin_verify = require('../access/adminAccess')
 const Admin_blog = require('../schema/admin_blog');
 const Admin_post = require('../schema/admin_post')
-const Data=require('../schema/schema')
+const Data = require('../schema/schema')
 
 
 
@@ -60,7 +60,7 @@ adminRoute.get('/admin_active', admin_verify, async (req, res) => {
 })
 
 
-adminRoute.post('/admin_post',admin_verify, async (req, res) => {
+adminRoute.post('/admin_post', admin_verify, async (req, res) => {
     try {
 
         const title = req.body.title;
@@ -68,9 +68,9 @@ adminRoute.post('/admin_post',admin_verify, async (req, res) => {
         const keywords = req.body.keywords;
 
         const creator = req.body.creator;
-        const description=req.body.description;
-        const country= req.body.country;
-        const category= req.body.category;
+        const description = req.body.description;
+        const country = req.body.country;
+        const category = req.body.category;
 
         cloud.config({
             cloud_name: 'do69xdw9x',
@@ -79,12 +79,12 @@ adminRoute.post('/admin_post',admin_verify, async (req, res) => {
             secure: true
         })
         const file = req.files.image_url;
-        
+
         if (file.size <= 700000) {
 
             const data_image = await cloud.uploader.upload(file.tempFilePath);
             if (data_image) {
-                
+
                 const admin_post_data = new Admin_post({ title, link, keywords, creator, description, image_url: data_image.url, country, category })
 
                 const result = await admin_post_data.save();
@@ -158,27 +158,107 @@ adminRoute.post('/admin_blog', admin_verify, async (req, res) => {
     }
 })
 
-adminRoute.get('/all_user',async(req,res)=>{
-    try{
-       const get_datails=await Data.find({});
-       if(get_datails){
-           
-           res.status(200).send(get_datails)
-       }else{
-           res.status(400).send("no user found")
-       }
+adminRoute.get('/all_user', async (req, res) => {
+    try {
+        const get_datails = await Data.find({});
+        if (get_datails) {
 
-    }catch(e){
+            res.status(200).send(get_datails)
+        } else {
+            res.status(400).send("no user found")
+        }
+
+    } catch (e) {
         res.status(400).send();
     }
 })
 
-adminRoute.post('/admin_logout',(req,res)=>{
-
-        res.clearCookie('access_token');
+adminRoute.get('/admin_blog',admin_verify ,async(req, res) => {
+    try{
+        const result=await Admin_blog.find({});
+        if(result){
+            res.status(200).send(result)
+        }
+    }catch(e){
+        res.status(400).send()
+    }
+   
     
-        res.status(200).send();
-         
+})
+adminRoute.get('/admin_post',admin_verify,async (req, res) => {
+    try{
+        const result=await Admin_post.find({});
+        if(result){
+            res.status(200).send(result)
+        }
+    }catch(e){
+        res.status(400).send()
+    }
+})
+
+adminRoute.delete('/admin_blog/:id',admin_verify,async(req,res)=>{
+    try{
+  
+       const id=req.params.id;
+       
+      
+       const result=await Admin_blog.deleteOne({_id:id});
+       if(result.deletedCount>0){
+        res.status(200).send(result);
+       }else{
+        res.status(400).send(result);
+       }
+    }catch(e){
+        res.status(400).send(result); 
+    }
+
+})
+
+adminRoute.delete('/admin_post/:id',admin_verify,async(req,res)=>{
+    try{
+  
+       const id=req.params.id;
+       
+      
+       const result=await Admin_post.deleteOne({_id:id});
+       if(result.deletedCount>0){
+        res.status(200).send(result);
+       }else{
+        res.status(400).send(result);
+       }
+    }catch(e){
+        res.status(400).send(result); 
+    }
+
+})
+
+
+adminRoute.delete('/admin_post/:id',admin_verify,async(req,res)=>{
+    try{
+  
+       const id=req.params.id;
+       
+      
+       const result=await Admin_post.deleteOne({_id:id});
+       if(result.deletedCount>0){
+        res.status(200).send(result);
+       }else{
+        res.status(400).send(result);
+       }
+    }catch(e){
+        res.status(400).send(result); 
+    }
+
+})
+
+
+
+adminRoute.post('/admin_logout', (req, res) => {
+
+    res.clearCookie('access_token');
+
+    res.status(200).send();
+
 })
 
 

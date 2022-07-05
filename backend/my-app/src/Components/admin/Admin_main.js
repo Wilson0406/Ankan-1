@@ -47,7 +47,7 @@ function Admin_main() {
             <div id="wrapper">
 
 
-                <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+                <ul className="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion " id="accordionSidebar">
 
 
                     <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -68,50 +68,6 @@ function Admin_main() {
                             <i className="fas fa-fw fa-tachometer-alt"></i>
                             <span>Dashboard</span></a>
                     </li>
-
-
-                    <hr className="sidebar-divider" />
-
-
-                    <div className="sidebar-heading">
-                        Interface
-                    </div>
-
-
-                    <li className="nav-item">
-                        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="true" aria-controls="collapseTwo">
-                            <i className="fas fa-fw fa-cog"></i>
-                            <span>Components</span>
-                        </a>
-                        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                            <div className="bg-white py-2 collapse-inner rounded">
-                                <h6 className="collapse-header">Custom Components:</h6>
-                                <a className="collapse-item" href="buttons.html">Buttons</a>
-                                <a className="collapse-item" href="cards.html">Cards</a>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <li className="nav-item">
-                        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                            aria-expanded="true" aria-controls="collapseUtilities">
-                            <i className="fas fa-fw fa-wrench"></i>
-                            <span>Utilities</span>
-                        </a>
-                        <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities"
-                            data-parent="#accordionSidebar">
-                            <div className="bg-white py-2 collapse-inner rounded">
-                                <h6 className="collapse-header">Custom Utilities:</h6>
-                                <a className="collapse-item" href="utilities-color.html">Colors</a>
-                                <a className="collapse-item" href="utilities-border.html">Borders</a>
-                                <a className="collapse-item" href="utilities-animation.html">Animations</a>
-                                <a className="collapse-item" href="utilities-other.html">Other</a>
-                            </div>
-                        </div>
-                    </li>
-
 
                     <hr className="sidebar-divider" />
 
@@ -409,7 +365,7 @@ function Admin_main() {
                         <footer className=" bg-white">
                             <div className="container" style={{marginTop:"10vh"}}>
                                 <div className="copyright text-center my-auto">
-                                    <span>Copyright &copy; Your Website 2021</span>
+                                    {/* <span>Copyright &copy; Your Website 2021</span> */}
                                 </div>
                             </div>
                         </footer>

@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios'
 
 
+
 export default function Navbar() {
 
   const [userActive, setUserActive] = useState(false)
@@ -104,7 +105,7 @@ export default function Navbar() {
             <li className="dropdown-items"><a href='/'>Empowerment</a></li>
             <li className="dropdown-items"><a href='/'>Environment</a></li>
             <li className="dropdown-items"><a href='/'>Fatafat News</a></li>
-            <li className="dropdown-items dropdown-last"><a href='/'>Autring's Blog</a></li>
+            <li className="dropdown-items dropdown-last"><Link to='/blog'>Autring's Blog</Link></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Career</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Connect with us</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>support to Journalism</a></li>

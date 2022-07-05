@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt');
 const KEY = "ANKANKARMAKAR";
 const user_verify=require('../access/userAccess')
+const Admin_blog=require('../schema/admin_blog');
 
 
 
@@ -91,8 +92,6 @@ router.get('/user_active',user_verify,async(req,res)=>{
         res.status(400).send()
     }
 })
-
-
 
 
 module.exports = router;

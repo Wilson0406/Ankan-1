@@ -20,18 +20,14 @@ import Login from './Components/admin/Login';
 import Register from './Components/admin/Register';
 import Forgot_pass from './Components/admin/Forgot_pass';
 import Login_admin from './Components/admin/Login_admin';
+import Blog from './Components/blog/Blog'
 
 function App() {
 
 
   return (
     <>
-    {/* <Forgot_pass></Forgot_pass>
-    <Register></Register>
-    <Login></Login>*/}
-    {/* <Admin_main></Admin_main>  */}
-   
-      
+
      
   
       <Router>
@@ -49,6 +45,7 @@ function App() {
           <Route exact path='/admin_login'  element={<Login_admin></Login_admin>} />
           <Route exact path='/admin_main'  element={<Admin_main></Admin_main>} />
           <Route exact path='/user_logout'  element={<Logout></Logout>} />
+          <Route exact path='/blog'  element={<Blog></Blog>} />
           <Route path='*' element={<Error />} />
         </Routes>
       </Router>
