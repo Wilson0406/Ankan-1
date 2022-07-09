@@ -75,6 +75,8 @@ header a:hover {
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barrio&family=Baumans&family=Big+Shoulders+Text:wght@100&family=Bowlby+One&family=Comic+Neue:wght@300&family=Happy+Monkey&family=Kelly+Slab&family=League+Spartan:wght@100;500;700;800;900&family=Limelight&family=Londrina+Shadow&family=Megrim&family=Nova+Flat&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=VT323&display=swap');
     header {
         font-family: 'Poppins', sans-serif;
+        /* background:#fdbe94ba; */
+        /* background: rgba(0, 0, 0, 0.158); */
     }
     header a {
         text-decoration: none;
@@ -123,10 +125,10 @@ header a:hover {
         visibility: visible;
     }
 
-    @media screen and (max-width:767px) {
-        /* header {
-            visibility: hidden;
-        } */
+    @media screen and (max-width:900px) {
+        header {
+            display: none;
+        }
 
         .btn.support {
         visibility: hidden;

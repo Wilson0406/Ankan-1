@@ -96,7 +96,7 @@ export default function Navbar() {
         <li className="nav-item"><Link className="nav-link" to="/science">SCIENCE&TECH</Link></li>
         <li className="nav-item"><Link className="nav-link" to="/videos">VIDEOS</Link></li>
         <li className=" nav-item nav-dropdown">
-          GET INVOVED
+          GET INVOLVED
           <ul className="dropdown-ul">
             <li className="dropdown-items"><a href='/'>HealthCare</a></li>
             <li className="dropdown-items"><a href='/'>Eduction</a></li>
@@ -107,7 +107,7 @@ export default function Navbar() {
             <li className="dropdown-items dropdown-last"><a href='/'>Autring's Blog</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Career</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Connect with us</a></li>
-            <li className="dropdown-items dropdown-last"><a href='/'>support to Journalism</a></li>
+            <li className="dropdown-items dropdown-last"><a href='/'>Support to Journalism</a></li>
           </ul>
         </li>
 
