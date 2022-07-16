@@ -2,12 +2,21 @@ import React, { useState, useEffect } from 'react'
 import './navbar.css'
 import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios'
+import { connect } from 'react-redux';
 
+import { getThemeModes, getThemeMode } from '../../state';
 
-export default function Navbar() {
+ const  dispatchUpdateTheme = (currentTheme) => dispatch => {
+  const themeModes = getThemeModes();
+  if(currentTheme == themeModes.dark)dispatch({type: 'SET_THEME', payload: themeModes.light});
+  else if(currentTheme == themeModes.light)dispatch({type: 'SET_THEME', payload: themeModes.dark});
+}
+
+function Navbar(props) {
 
   const [userActive, setUserActive] = useState(false)
   const [profile,setProfile]=useState();
+  const [buttonText, setButtonText] = useState(props.currentTheme);
   const navigate = useNavigate();
 
   let handleCrossClick = () => {
@@ -71,12 +80,19 @@ export default function Navbar() {
    })
 
 }
+
+ const handleChangeTheme = () => {
+  props.dispatchUpdateTheme(props.currentTheme);
+ }
+
   useEffect(() => {
+    console.log('navbar=============', props);
     check_user();
     user_details();
+setButtonText(props.currentTheme == getThemeModes().light? 'DARK':'LIGHT');
+  }, [props.currentTheme])
 
-  }, [])
-
+console.log('button text   ', buttonText)
   return (
     <div className="navbar-a">
       <div className='mobile-nav'>
@@ -159,7 +175,17 @@ export default function Navbar() {
         <li><i className="fa-solid fa-x" id='fa-x' onClick={handleCrossClick}></i></li>
         <li className='nav-item ind nav-ind'><h3>Support for Journalism</h3></li>
       </ul>
+      <div className='button'>
+      <button type="button"  onClick = {handleChangeTheme} className="btn btn-secondary">{buttonText} MODE</button>
+      </div>
     </div>
 
   )
 }
+const mapStateToProps = (state) => {
+  console.log('mapstate  to props====================', state)
+  return {
+    currentTheme: getThemeMode(state),
+  }
+}
+export default connect(mapStateToProps, {dispatchUpdateTheme} )(Navbar)

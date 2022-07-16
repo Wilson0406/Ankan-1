@@ -507,3 +507,11 @@ cursor: pointer;
   margin-right: 20px ;
 }
 }
+.button{
+  width: 130px;
+  margin-left: 50px;
+  
+}
+.btn{
+  font-size: small;
+}

@@ -24,30 +24,30 @@ function SectionrightCard(props) {
          else return s;
       }
     return (
-        <div className="pov-card">
+        <div className="pov-card" style={{ marginTop:"15px"}}>
             {/* <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Pov <div style={{ background: "red", display: "inline-block", width: "230px", height: "5px" }}></div></h4> */}
            { props.data?(
             <div className="row">
              
                 <div className="col-md-12">
                     <div className='pov-card-right' >
-                        <img src={props.data[6].image_url}  className='img-fluid pov-card-top-img'  alt="" />
+                        <img src={props.data[6].image_url}  className='img-fluid pov-card-top-img'  alt="" style={{marginLeft:"20px"}}/>
                         <div className="card-body">
-                            <h6 className="card-title" style={{marginLeft:"-10px"}}>
+                            <h6 className="card-title" style={{marginLeft:"10px"}}>
                                {isText(props.data[6].title).substring(0,50)}...
                             </h6>
-                            <h6 className='card-title' style={{marginLeft:"-10px"}}>{isDescription(props.data[6].description).substring(0,50)}...</h6>
-                            <span className='card-logo'><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{isCreator(props.data[6].creator)}</span></span>
+                            <h6 className='card-title' style={{marginLeft:"10px"}}>{isDescription(props.data[6].description).substring(0,50)}...</h6>
+                            <span className='card-logo' style={{marginLeft:"10px"}}><i className="fa-solid fa-circle-user"></i> <span className="logo-text">{isCreator(props.data[6].creator)}</span></span>
                         </div>
                     </div>
                 </div>
 
                 <div className="pov-card-right-reader-editor col-md-12 my-4">
-                <div  style={{width:"18rem"}}>
-                <h4 style={{ fontSize: "15px", marginLeft: "6px", display: "inline-block" }}>Reader Editors<div style={{ background: "red", display: "inline-block", width: "150px", height: "5px",marginLeft:"3px" }}></div></h4>
+                <div  style={{width:"18rem, marginLeft:15px"}}>
+                <h4 style={{ fontSize: "15px", marginLeft: "15px", display: "inline-block" }}>Reader Editors<div style={{ background: "red", display: "inline-block", width: "150px", height: "5px",marginLeft:"3px" }}></div></h4>
                             <div style={{width:"18rem",marginLeft:"15px"}}>
                             
-                               <p style={{fontSize:"12px",fontWeight:500,marginLeft:"-7px"}}> Lorem ipsum dolor elit. Placeat fugiat, maiores illo ratione impedit cumque architecto sint natus deserunt ab, similique ipsum quas, hic quam.
+                               <p style={{fontSize:"12px",fontWeight:500,marginLeft:"7px"}}> Lorem ipsum dolor elit. Placeat fugiat, maiores illo ratione impedit cumque architecto sint natus deserunt ab, similique ipsum quas, hic quam.
                                e architecto sint natus deserunt ab, e architecto sint natus deserunt ab,  e a
                                </p>
                             </div>

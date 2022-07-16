@@ -1,4 +1,5 @@
 import './App.css';
+import {useEffect, useState} from 'react'
 import {
   BrowserRouter as Router,
   Route,
@@ -21,18 +22,37 @@ import Register from './Components/admin/Register';
 import Forgot_pass from './Components/admin/Forgot_pass';
 import Login_admin from './Components/admin/Login_admin';
 
-function App() {
+import {createGlobalStyle,ThemeProvider} from 'styled-components'
+import { getThemeMode } from './state';
+import { connect } from 'react-redux';
+
+const GlobalStyle=createGlobalStyle`
+body{
+  background-color:${props=>props.theme.mode=='dark'?'rgb(73, 64, 64);':'#fff'};
+  color:${props=>props.theme.mode==='dark'?'#fff':'#111'};
+}
+`;
 
 
+
+function App(props) {
+
+  const[theme, setTheme]=useState({mode: props.currentTheme})
+  useEffect(()=>{
+    setTheme({mode: props.currentTheme})
+  }, [props.currentTheme])
   return (
-    <>
-    {/* <Forgot_pass></Forgot_pass>
-    <Register></Register>
-    <Login></Login>*/}
-    {/* <Admin_main></Admin_main>  */}
-   
+    <ThemeProvider theme={theme}> 
+  
+      <>
+         <GlobalStyle />
+      {/* <Forgot_pass></Forgot_pass>
+      <Register></Register>
+      <Login></Login>*/}
+      {/* <Admin_main></Admin_main>  */}
+    
       
-     
+    
   
       <Router>
         <Routes>
@@ -63,8 +83,14 @@ function App() {
 
     </>
 
-
+    </ThemeProvider>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    currentTheme: getThemeMode(state),
+  }
+}
+// export default App
+export default connect(mapStateToProps)(App);
