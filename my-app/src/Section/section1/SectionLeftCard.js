@@ -26,7 +26,7 @@ function SectionLeftCard(props) {
      }
     return (
         
-        <section className='top-heading'>
+        <section className='top-heading' style={{ marginTop:"15px"}}>
             
             
             
@@ -34,11 +34,11 @@ function SectionLeftCard(props) {
             {
                      props.data?(
                          <>
-            <div className="row">
-                <div className="col-md-6 col-sm-12">
+            <div className="row" style={{ marginTop:"15px"}}>
+                <div className="col-md-6 col-sm-12" >
                  
                     <div className="card-left">
-                        <img src={props.data[0].image_url} className="card-img-top" alt="..." />
+                        <img src={props.data[0].image_url} className="card-img-top" alt="..." style={{marginLeft:"10px", width:"100%",maxHeight:270}} />
                         <div className="card-body">
                             <h6 className="card-title">{isText(props.data[0].title)}</h6>
                             <span ><i className="fa-solid fa-circle-user"></i><span className="logo-text">{isCreator(props.data[0].creator)}</span>
