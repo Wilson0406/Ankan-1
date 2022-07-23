@@ -40,6 +40,10 @@ text-decoration: none;
 
 }
 
+.nav-item a.active{
+  border-bottom:4px solid #E62C00;
+}
+
 .nav-ul  a:hover{
 color: red;
 

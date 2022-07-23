@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './navbar.css'
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 import axios from 'axios'
 import { connect } from 'react-redux';
 
@@ -14,7 +14,7 @@ import { getThemeModes, getThemeMode } from '../../state';
 
 function Navbar(props) {
 
-  const [userActive, setUserActive] = useState(false)
+  const [userActive, setUserActive] = useState(false);
   const [profile,setProfile]=useState();
   const [buttonText, setButtonText] = useState(props.currentTheme);
   const navigate = useNavigate();
@@ -103,14 +103,14 @@ console.log('button text   ', buttonText)
         </span>
       </div>
       <ul className="nav-ul" id="nav-ul">
-        <li className="nav-item"><Link className="nav-link" to="/">INDIA</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/international">INTERNATIONAL</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/political">POLITICAL</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/governance">GOVERNANCE</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/economy">ECONOMY</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/sports">SPORTS</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/science">SCIENCE&TECH</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/videos">VIDEOS</Link></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/">INDIA</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/international">INTERNATIONAL</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/political">POLITICAL</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/governance">GOVERNANCE</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/economy">ECONOMY</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/sports">SPORTS</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/science">SCIENCE&TECH</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/videos">VIDEOS</NavLink></li>
         <li className=" nav-item nav-dropdown">
           GET INVOLVED
           <ul className="dropdown-ul">
@@ -176,7 +176,7 @@ console.log('button text   ', buttonText)
         <li className='nav-item ind nav-ind'><h3>Support for Journalism</h3></li>
       </ul>
       <div className='button'>
-      <button type="button"  onClick = {handleChangeTheme} className="btn btn-secondary">{buttonText} MODE</button>
+      <button type="button" onClick = {handleChangeTheme} className="btn btn-secondary">{buttonText} MODE</button>
       </div>
     </div>
 
