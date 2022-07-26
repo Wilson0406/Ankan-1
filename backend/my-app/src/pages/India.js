@@ -48,7 +48,7 @@ function India() {
   }
 
   const apiData3 = () => {
-    axios.get(url).then((response) => {
+    axios.get(url3).then((response) => {
 
       setThirdIndiaData(response.data.results);
 
@@ -61,7 +61,7 @@ function India() {
   }
 
   const apiData4 = () => {
-    axios.get(url).then((response) => {
+    axios.get(url4).then((response) => {
 
       setFourIndiaData(response.data.results);
 
@@ -79,9 +79,9 @@ function India() {
 
   useEffect(() => {
     apiData();
-    apiData2();
-    apiData3();
-    apiData4();
+    // apiData2();
+    // apiData3();
+    // apiData4();
   
   }, [])
   return (

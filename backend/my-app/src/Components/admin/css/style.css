@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,800&display=swap');
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
   }
   
- .my-border{
-  border:2px solid red;
- }
- 
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -70,27 +62,9 @@
   }
 
 
-  
 
-.sidebar-dark .sidebar-brand{
-  color: black;
-}
-.sidebar-dark .nav-item.active .nav-link i{
-  color: black;
-}
 
-.sidebar-dark .nav-item.active .nav-link:hover {
-  background-color:#fff;
-}
-  
-
-.sidebar-dark .nav-item.active .nav-link{
-  color: black;
-}
-
-.sidebar-dark .nav-item .nav-link {
-  color: black;
-}
+  /* admin post  */
 
 
   .main-div{
@@ -98,63 +72,6 @@
     margin: auto;
 }
 
-
-.table-main{
-  overflow-y:scroll;
-  height: 100vh;
- 
-
-}
-
-/* blog post on admin page */
-
- .card .card-body .my-h5{
-    font-size: 12px;
-    font-weight: 500;
-  
-}
-.recent-post-blog{
-  padding: 10px;
-}
-
-.recent-blog-border-st{
-  color: #04AA6D;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 700;
-  margin-top: 10px;
-}
-
-.recent-blog-button{
-  color:#fff;
-  background-color: #45a049;
-  display: inline-block;
-  width: 10%;
-  margin:3px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  height: 40px;
-
-}
-
-
-
-.card-button a{
-  padding: 20px;
-}
-
-.card-button .fa-trash-can:hover{
-  color:red
-}
-
-.card-button .fa-trash-can:hover{
-  color:red
-}
-
-.card-button .fa-pen:hover{
-  color:#04AA6D
-}
 @media only screen and (max-width:576px){
     .main-div{
         width:80%;

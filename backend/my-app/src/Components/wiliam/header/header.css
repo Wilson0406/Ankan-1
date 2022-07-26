@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barrio&family=Baumans&family=Big+Shoulders+Text:wght@100&family=Bowlby+One&family=Comic+Neue:wght@300&family=Happy+Monkey&family=Kelly+Slab&family=League+Spartan:wght@100;500;700;800;900&family=Limelight&family=Londrina+Shadow&family=Megrim&family=Nova+Flat&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=VT323&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barrio&family=Baumans&family=Big+Shoulders+Text:wght@100&family=Bowlby+One&family=Comic+Neue:wght@300&family=Happy+Monkey&family=Kelly+Slab&family=League+Spartan:wght@100;500;700;800;900&family=Limelight&family=Londrina+Shadow&family=Megrim&family=Nova+Flat&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=VT323&display=swap');
 header {
     font-family: 'Poppins', sans-serif;
-   
 }
 header a {
     text-decoration: none;
@@ -57,13 +56,114 @@ header a:hover {
     color: #fff;
 }
 
-
 @media only screen and (max-width:900px)   {
     header {
        display: none;
-       
     }
 }
 
+.row>* {
+    padding: 0;
+    border: 0;
+}
 
+.card-body a {
+  text-decoration: none;
+  color: #000;
+} */
 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barrio&family=Baumans&family=Big+Shoulders+Text:wght@100&family=Bowlby+One&family=Comic+Neue:wght@300&family=Happy+Monkey&family=Kelly+Slab&family=League+Spartan:wght@100;500;700;800;900&family=Limelight&family=Londrina+Shadow&family=Megrim&family=Nova+Flat&family=Poppins:ital,wght@0,300;0,600;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=VT323&display=swap');
+    header {
+        font-family: 'Poppins', sans-serif;
+        /* background:#fdbe94ba; */
+        /* background: rgba(0, 0, 0, 0.158); */
+    }
+    header a {
+        text-decoration: none;
+    }
+
+    header a:hover {
+        color: #ff3030;
+    }
+    .card {
+        border: 1px;
+        /* --bs-card-border-width: 0; */
+    }
+
+    .fab {
+        transform: scale(0.9);
+    }
+
+    .bx {
+      transform: scale(1.4);
+      cursor: pointer;
+    }
+
+    .circle {
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        background-color: #f4ea30;
+        padding-top: 7.5px;
+        color: #000;
+        visibility: visible;
+    }
+
+    .circle:hover {
+        color: #fff;
+        background-color: #ff3030;
+    }
+
+    .btn.support {
+        background: #f4ea30;
+        border-radius: 22px;
+        width: 14rem;
+        padding: 0.3rem 0.9rem;
+        color: #000;
+        visibility: visible;
+    }
+
+    @media screen and (max-width:900px) {
+        header {
+            display: none;
+        }
+
+        .btn.support {
+        visibility: hidden;
+        }
+
+        .circle {
+            visibility: hidden;
+        }
+
+        #date {
+            visibility: hidden;
+        }
+    }
+
+    .support:hover {
+        background: #ff3030;
+        border-radius: 22px;
+        color: #fff;
+    }
+
+    .row>* {
+        padding: 0;
+        border: 0;
+    }
+
+    .card-body a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .card-footer {
+        background-color: #fff;
+        border: 0;
+    }
+
+#date {
+    font-size: 0.7em;
+}

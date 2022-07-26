@@ -105,7 +105,6 @@ function Admin_post() {
                     <input type="file" className="form-control" onChange={(e)=>{
                         setImageUrl(e.target.files[0]);
                     }} id="imageUrl" aria-describedby="imageUrl" required />
-                     image should be less than 700 kb
                 </div>
            
                 <div className="dropdown mb-3">

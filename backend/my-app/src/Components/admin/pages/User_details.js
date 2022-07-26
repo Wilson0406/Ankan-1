@@ -18,7 +18,6 @@ function User_details() {
   return (
     <>
       
- <div className="container table-main">
 <table class="table">
   <thead class="thead-light">
     <tr>
@@ -52,7 +51,6 @@ function User_details() {
     
   </tbody>
 </table>
-</div>
       </>
   )
 }

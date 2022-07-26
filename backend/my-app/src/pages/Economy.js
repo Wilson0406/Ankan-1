@@ -45,7 +45,7 @@ function Economy() {
   }
 
   const apiData3 = () => {
-    axios.get(url).then((response) => {
+    axios.get(url3).then((response) => {
 
       settData(response.data.results);
 
@@ -58,7 +58,7 @@ function Economy() {
   }
 
   const apiData4 = () => {
-    axios.get(url).then((response) => {
+    axios.get(url4).then((response) => {
 
       setfData(response.data.results);
 
@@ -76,9 +76,9 @@ function Economy() {
 
   useEffect(() => {
     apiData();
-    apiData2();
-    apiData3();
-    apiData4();
+    // apiData2();
+    // apiData3();
+    // apiData4();
 
   }, [])
 

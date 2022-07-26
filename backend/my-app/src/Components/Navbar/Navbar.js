@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import './navbar.css'
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 import axios from 'axios'
+import { connect } from 'react-redux';
 
+import { getThemeModes, getThemeMode } from '../../state';
 
+ const  dispatchUpdateTheme = (currentTheme) => dispatch => {
+  const themeModes = getThemeModes();
+  if(currentTheme == themeModes.dark)dispatch({type: 'SET_THEME', payload: themeModes.light});
+  else if(currentTheme == themeModes.light)dispatch({type: 'SET_THEME', payload: themeModes.dark});
+}
 
-export default function Navbar() {
+function Navbar(props) {
 
-  const [userActive, setUserActive] = useState(false)
+  const [userActive, setUserActive] = useState(false);
   const [profile,setProfile]=useState();
+  const [buttonText, setButtonText] = useState(props.currentTheme);
   const navigate = useNavigate();
 
   let handleCrossClick = () => {
@@ -72,12 +80,19 @@ export default function Navbar() {
    })
 
 }
+
+ const handleChangeTheme = () => {
+  props.dispatchUpdateTheme(props.currentTheme);
+ }
+
   useEffect(() => {
+    console.log('navbar=============', props);
     check_user();
     user_details();
+setButtonText(props.currentTheme == getThemeModes().light? 'DARK':'LIGHT');
+  }, [props.currentTheme])
 
-  }, [])
-
+console.log('button text   ', buttonText)
   return (
     <div className="navbar-a">
       <div className='mobile-nav'>
@@ -88,16 +103,16 @@ export default function Navbar() {
         </span>
       </div>
       <ul className="nav-ul" id="nav-ul">
-        <li className="nav-item"><Link className="nav-link" to="/">INDIA</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/international">INTERNATIONAL</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/political">POLITICAL</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/governance">GOVERNANCE</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/economy">ECONOMY</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/sports">SPORTS</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/science">SCIENCE&TECH</Link></li>
-        <li className="nav-item"><Link className="nav-link" to="/videos">VIDEOS</Link></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/">INDIA</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/international">INTERNATIONAL</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/political">POLITICAL</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/governance">GOVERNANCE</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/economy">ECONOMY</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/sports">SPORTS</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/science">SCIENCE&TECH</NavLink></li>
+        <li className="nav-item"><NavLink className="nav-link" to="/videos">VIDEOS</NavLink></li>
         <li className=" nav-item nav-dropdown">
-          GET INVOVED
+          GET INVOLVED
           <ul className="dropdown-ul">
             <li className="dropdown-items"><a href='/'>HealthCare</a></li>
             <li className="dropdown-items"><a href='/'>Eduction</a></li>
@@ -105,10 +120,10 @@ export default function Navbar() {
             <li className="dropdown-items"><a href='/'>Empowerment</a></li>
             <li className="dropdown-items"><a href='/'>Environment</a></li>
             <li className="dropdown-items"><a href='/'>Fatafat News</a></li>
-            <li className="dropdown-items dropdown-last"><Link to='/blog'>Autring's Blog</Link></li>
+            <li className="dropdown-items dropdown-last"><a href='/'>Autring's Blog</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Career</a></li>
             <li className="dropdown-items dropdown-last"><a href='/'>Connect with us</a></li>
-            <li className="dropdown-items dropdown-last"><a href='/'>support to Journalism</a></li>
+            <li className="dropdown-items dropdown-last"><a href='/'>Support to Journalism</a></li>
           </ul>
         </li>
 
@@ -160,7 +175,17 @@ export default function Navbar() {
         <li><i className="fa-solid fa-x" id='fa-x' onClick={handleCrossClick}></i></li>
         <li className='nav-item ind nav-ind'><h3>Support for Journalism</h3></li>
       </ul>
+      <div className='button'>
+      <button type="button" onClick = {handleChangeTheme} className="btn btn-secondary">{buttonText} MODE</button>
+      </div>
     </div>
 
   )
 }
+const mapStateToProps = (state) => {
+  console.log('mapstate  to props====================', state)
+  return {
+    currentTheme: getThemeMode(state),
+  }
+}
+export default connect(mapStateToProps, {dispatchUpdateTheme} )(Navbar)
